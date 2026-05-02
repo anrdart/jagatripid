@@ -1,0 +1,26 @@
+---
+import Eyebrow from '../ui/Eyebrow.astro';
+import SectionTitle from '../ui/SectionTitle.astro';
+import steps from '../../content/process.json';
+---
+<section class="section process-section" aria-labelledby="process-title">
+  <div class="container">
+    <div class="section-header">
+      <Eyebrow>Cara Kerja Kami</Eyebrow>
+      <SectionTitle id="process-title">
+        5 Tahap, <span class="italic">1 Pengalaman Tak Terlupakan.</span>
+      </SectionTitle>
+      <p class="section-desc">Setiap perjalanan JAGATRIP dirancang dengan metodologi 5 tahap yang teruji.</p>
+    </div>
+
+    <div class="process-grid">
+      {steps.map((step) => (
+        <div class="process-step">
+          <div class="process-num" aria-hidden="true">{step.num}</div>
+          <h4>{step.title}</h4>
+          <p>{step.desc}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

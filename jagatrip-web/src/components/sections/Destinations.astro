@@ -1,0 +1,28 @@
+---
+import Eyebrow from '../ui/Eyebrow.astro';
+import SectionTitle from '../ui/SectionTitle.astro';
+import destinations from '../../content/destinations.json';
+---
+<section class="section destinations-section" id="paket" aria-labelledby="dest-title">
+  <div class="container">
+    <div class="section-header">
+      <Eyebrow>Destinasi Edutrip</Eyebrow>
+      <SectionTitle id="dest-title">
+        Dunia adalah <span class="italic">ruang kelas terbesar.</span>
+      </SectionTitle>
+      <p class="section-desc">Kami siapkan kunjungan pendidikan ke 7 negara dengan kurikulum yang berbeda untuk tiap destinasi.</p>
+    </div>
+
+    <div class="dest-grid">
+      {destinations.map((dest) => (
+        <div class={`dest-card ${dest.cardClass}`}>
+          <div class="dest-flag" aria-hidden="true">{dest.flag}</div>
+          <div class="dest-content">
+            <h3>{dest.name}</h3>
+            <p>{dest.desc}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

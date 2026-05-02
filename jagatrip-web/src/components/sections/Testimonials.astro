@@ -1,0 +1,33 @@
+---
+import Eyebrow from '../ui/Eyebrow.astro';
+import SectionTitle from '../ui/SectionTitle.astro';
+import testimonials from '../../content/testimonials.json';
+---
+<section class="section" style="background: var(--color-paper);" aria-labelledby="testi-title">
+  <div class="container">
+    <div class="section-header">
+      <Eyebrow>Yang Mereka Katakan</Eyebrow>
+      <SectionTitle id="testi-title">
+        Lebih dari sekadar liburan — ini <span class="italic">pengalaman yang mengubah hidup.</span>
+      </SectionTitle>
+    </div>
+
+    <div class="testimonials-grid">
+      {testimonials.map((t) => (
+        <div class="testimonial">
+          <div class="testimonial-stars" aria-label={`${t.stars} bintang`}>
+            {'★'.repeat(t.stars)}
+          </div>
+          <blockquote class="testimonial-text">{t.text}</blockquote>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar" aria-hidden="true">{t.initials}</div>
+            <div class="testimonial-author-info">
+              <strong>{t.name}</strong>
+              <span>{t.role}</span>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
