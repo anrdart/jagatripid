@@ -1,0 +1,114 @@
+---
+import HeroBadge from '../ui/HeroBadge.astro';
+---
+<section class="urgency-section" id="kontak" aria-labelledby="urgency-title">
+  <div class="container">
+    <div class="urgency-grid">
+      <!-- LEFT: badge, heading, countdown, bonuses -->
+      <div>
+        <HeroBadge style="background: rgba(255,255,255,0.2); color: white;">
+          Penawaran Terbatas Pendaftaran 2026
+        </HeroBadge>
+
+        <h2 id="urgency-title">
+          Early Bird Discount: <span class="italic">Hemat 15%</span>
+        </h2>
+
+        <p style="font-size: 18px; opacity: 0.95; margin-bottom: 32px; line-height: 1.6;">
+          Sekolah yang mendaftar sebelum tanggal cutoff dapat early bird discount + bonus 1 free seat untuk guru pendamping. Jangan lewatkan kesempatan ini.
+        </p>
+
+        <div class="countdown" role="timer" aria-label="Hitung mundur penawaran">
+          <div class="countdown-item">
+            <div class="countdown-num" id="cd-days">14</div>
+            <div class="countdown-label">Hari</div>
+          </div>
+          <div class="countdown-item">
+            <div class="countdown-num" id="cd-hours">08</div>
+            <div class="countdown-label">Jam</div>
+          </div>
+          <div class="countdown-item">
+            <div class="countdown-num" id="cd-mins">42</div>
+            <div class="countdown-label">Menit</div>
+          </div>
+          <div class="countdown-item">
+            <div class="countdown-num" id="cd-secs">15</div>
+            <div class="countdown-label">Detik</div>
+          </div>
+        </div>
+
+        <div style="display: flex; gap: 12px; align-items: center; font-size: 14px; flex-wrap: wrap;">
+          <span style="background: rgba(0,0,0,0.2); padding: 8px 16px; border-radius: 100px; font-weight: 600;">
+            <span aria-hidden="true">🎁</span> Bonus Goody Bag Lengkap
+          </span>
+          <span style="background: rgba(0,0,0,0.2); padding: 8px 16px; border-radius: 100px; font-weight: 600;">
+            <span aria-hidden="true">📜</span> Sertifikat Resmi
+          </span>
+        </div>
+      </div>
+
+      <!-- RIGHT: form card -->
+      <div class="urgency-form">
+        <div class="form-title">Konsultasi Gratis Sekarang</div>
+        <p class="form-subtitle">Tim kami akan menghubungi Anda dalam 1×24 jam.</p>
+
+        <form id="konsultasi-form" novalidate>
+          <div class="form-group">
+            <label for="f-nama" class="sr-only">Nama Lengkap</label>
+            <input id="f-nama" name="nama" type="text" placeholder="Nama Lengkap*" required />
+          </div>
+          <div class="form-group">
+            <label for="f-sekolah" class="sr-only">Nama Sekolah/Instansi</label>
+            <input id="f-sekolah" name="sekolah" type="text" placeholder="Nama Sekolah/Instansi*" required />
+          </div>
+          <div class="form-group">
+            <label for="f-wa" class="sr-only">No. WhatsApp</label>
+            <input id="f-wa" name="wa" type="tel" placeholder="No. WhatsApp*" required />
+          </div>
+          <div class="form-group">
+            <label for="f-negara" class="sr-only">Negara Tujuan</label>
+            <select id="f-negara" name="negara" required>
+              <option value="">Negara Tujuan*</option>
+              <option>Jepang</option>
+              <option>Korea Selatan</option>
+              <option>Singapura</option>
+              <option>Malaysia</option>
+              <option>Australia</option>
+              <option>Turki</option>
+              <option>Mesir</option>
+              <option>Saudi Arabia</option>
+              <option>Belum Pasti</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="f-peserta" class="sr-only">Estimasi Jumlah Peserta</label>
+            <select id="f-peserta" name="peserta" required>
+              <option value="">Estimasi Jumlah Peserta*</option>
+              <option>10-20 orang</option>
+              <option>21-50 orang</option>
+              <option>51-100 orang</option>
+              <option>100+ orang</option>
+            </select>
+          </div>
+          <button type="submit" class="form-cta">Dapatkan Penawaran Khusus →</button>
+        </form>
+        <p class="form-disclaimer">🔒 Data Anda aman. Tidak ada spam.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .sr-only {
+    position: absolute; width: 1px; height: 1px;
+    padding: 0; margin: -1px; overflow: hidden;
+    clip: rect(0,0,0,0); white-space: nowrap; border-width: 0;
+  }
+</style>
+
+<script>
+  import { initCountdown } from '../../lib/countdown';
+  import { initFormHandler } from '../../lib/form-handler';
+  initCountdown();
+  initFormHandler();
+</script>

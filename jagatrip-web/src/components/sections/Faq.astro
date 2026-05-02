@@ -1,0 +1,41 @@
+---
+import Eyebrow from '../ui/Eyebrow.astro';
+import SectionTitle from '../ui/SectionTitle.astro';
+import faqs from '../../content/faqs.json';
+---
+<section class="section" aria-labelledby="faq-title">
+  <div class="container">
+    <div class="section-header">
+      <Eyebrow>Pertanyaan Umum</Eyebrow>
+      <SectionTitle id="faq-title">
+        Yang sering ditanyakan <span class="italic">kepala sekolah & orang tua.</span>
+      </SectionTitle>
+    </div>
+
+    <div class="faq-list">
+      {faqs.map((faq, i) => (
+        <div class={`faq-item${faq.open ? ' open' : ''}`}>
+          <button
+            class="faq-question"
+            aria-expanded={faq.open ? 'true' : 'false'}
+            aria-controls={`faq-answer-${i}`}
+          >
+            {faq.q}
+          </button>
+          <div
+            id={`faq-answer-${i}`}
+            class="faq-answer"
+            role="region"
+          >
+            {faq.a}
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<script>
+  import { initFaqToggle } from '../../lib/faq-toggle';
+  initFaqToggle();
+</script>
