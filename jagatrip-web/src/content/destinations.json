@@ -1,0 +1,10 @@
+[
+  { "id": "japan",  "flag": "🇯🇵", "name": "Jepang",        "desc": "Tokyo · Kyoto · Osaka — Teknologi & Disiplin",       "cardClass": "dest-card-1" },
+  { "id": "korea",  "flag": "🇰🇷", "name": "Korea Selatan", "desc": "Seoul · Busan — K-Culture & Innovation",              "cardClass": "dest-card-2" },
+  { "id": "spore",  "flag": "🇸🇬", "name": "Singapura",     "desc": "Smart City & Pendidikan Tinggi",                      "cardClass": "dest-card-3" },
+  { "id": "msia",   "flag": "🇲🇾", "name": "Malaysia",      "desc": "KL · Penang — Multicultural Hub",                     "cardClass": "dest-card-4" },
+  { "id": "aus",    "flag": "🇦🇺", "name": "Australia",     "desc": "Sydney · Melbourne — Top University",                  "cardClass": "dest-card-5" },
+  { "id": "turki",  "flag": "🇹🇷", "name": "Turki",         "desc": "Istanbul · Cappadocia — Sejarah Peradaban",           "cardClass": "dest-card-6" },
+  { "id": "egypt",  "flag": "🇪🇬", "name": "Mesir",         "desc": "Cairo · Alexandria — Cradle of Civilization",         "cardClass": "dest-card-7" },
+  { "id": "saudi",  "flag": "🇸🇦", "name": "Arab Saudi",    "desc": "Mecca · Madinah — Spiritual Journey",                 "cardClass": "dest-card-8" }
+]

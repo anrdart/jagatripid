@@ -1,0 +1,20 @@
+[
+  {
+    "num": "01",
+    "title": "Education-First, Not Travel-First",
+    "desc": "Setiap itinerary kami dirancang berbasis kurikulum sekolah, bukan sekadar destinasi. Setiap kunjungan punya learning objective yang jelas.",
+    "features": ["Itinerary kurikulum-aligned", "Learning objective per kunjungan", "Sertifikat & laporan refleksi", "Buku jurnal edukatif peserta"]
+  },
+  {
+    "num": "02",
+    "title": "Indonesia Soul, Global Standard",
+    "desc": "Kami memahami konteks Indonesia (sekolah, keluarga, kearifan lokal) sambil mengoperasikan standar internasional dalam safety dan quality.",
+    "features": ["Tour leader sertifikasi HPI", "Mitra resmi land operator global", "Makanan halal & ibadah terjamin", "Komunikasi bahasa Indonesia"]
+  },
+  {
+    "num": "03",
+    "title": "Guardian-Level Care",
+    "desc": "Logo kami adalah perisai dengan orang di dalam — bukan kebetulan. Kami memperlakukan setiap peserta seperti keluarga sendiri.",
+    "features": ["Pendampingan 24/7 selama trip", "Asuransi internasional 100%", "Laporan harian ke orang tua", "Briefing pra-keberangkatan"]
+  }
+]

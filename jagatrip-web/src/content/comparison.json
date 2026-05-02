@@ -1,0 +1,9 @@
+[
+  { "aspect": "Itinerary",                "competitor": "Wisata umum",           "jagatrip": "Kurikulum-aligned" },
+  { "aspect": "Tour Leader",              "competitor": "Guide pariwisata",       "jagatrip": "Edu-leader bersertifikat HPI" },
+  { "aspect": "Asuransi",                 "competitor": "Standar minimal",        "jagatrip": "Premium internasional" },
+  { "aspect": "Laporan ke Ortu",          "competitor": "Tidak ada",             "jagatrip": "Update harian via WA" },
+  { "aspect": "Kebutuhan Halal & Ibadah", "competitor": "Tidak terjamin",        "jagatrip": "Terjamin penuh" },
+  { "aspect": "Sertifikat & Refleksi",    "competitor": "Tidak ada",             "jagatrip": "Sertifikat + jurnal edukatif" },
+  { "aspect": "Transparansi Biaya",       "competitor": "Sering ada hidden cost", "jagatrip": "All-in, tanpa biaya tersembunyi" }
+]

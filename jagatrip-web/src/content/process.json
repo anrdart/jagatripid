@@ -1,0 +1,7 @@
+[
+  { "num": "1", "title": "Konsultasi Gratis",   "desc": "Pemetaan kebutuhan sekolah, target peserta, dan anggaran." },
+  { "num": "2", "title": "Itinerary Custom",    "desc": "Penyusunan itinerary kurikulum-aligned sesuai mata pelajaran." },
+  { "num": "3", "title": "Pra-Keberangkatan",  "desc": "Briefing peserta, pengurusan dokumen, & pengecekan akhir." },
+  { "num": "4", "title": "Perjalanan",          "desc": "Pendampingan 24/7 dengan tour leader bersertifikat HPI." },
+  { "num": "5", "title": "Pasca-Trip",          "desc": "Evaluasi, sertifikat, jurnal refleksi, & alumni network." }
+]
