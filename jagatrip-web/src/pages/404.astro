@@ -1,0 +1,17 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Nav from '../components/layout/Nav.astro';
+import Footer from '../components/layout/Footer.astro';
+---
+<BaseLayout title="404 — Halaman Tidak Ditemukan | JAGATRIP">
+  <Nav />
+  <main id="main" style="min-height: 60vh; display: flex; align-items: center; justify-content: center; text-align: center; padding: 60px 24px;">
+    <div>
+      <div style="font-family: var(--font-display), 'Fraunces', serif; font-size: 120px; font-weight: 900; font-style: italic; color: var(--color-orange); line-height: 1;">404</div>
+      <h1 style="font-family: var(--font-display), 'Fraunces', serif; font-size: 32px; font-weight: 800; margin-bottom: 16px;">Halaman tidak ditemukan</h1>
+      <p style="color: var(--color-grey); margin-bottom: 32px;">Halaman yang Anda cari tidak ada atau telah dipindahkan.</p>
+      <a href="/" class="btn-primary">← Kembali ke Beranda</a>
+    </div>
+  </main>
+  <Footer />
+</BaseLayout>
