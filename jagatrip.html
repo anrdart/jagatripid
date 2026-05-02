@@ -1,0 +1,1956 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JAGATRIP — Edutrip Internasional Terpercaya untuk Sekolah & Kampus Indonesia</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,700;9..144,900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --orange: #FF6B35;
+  --orange-dark: #E85A2C;
+  --orange-light: #FFE4D6;
+  --ink: #0A0A0A;
+  --grey: #6B7280;
+  --grey-light: #E5E7EB;
+  --paper: #FAF7F2;
+  --white: #FFFFFF;
+  --green: #10B981;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  background: var(--white);
+  color: var(--ink);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ============= STICKY NAV ============= */
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(255,255,255,0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--grey-light);
+  padding: 16px 0;
+}
+
+.nav-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 800;
+  font-size: 22px;
+  color: var(--ink);
+  text-decoration: none;
+  letter-spacing: -0.5px;
+}
+
+.logo-icon {
+  width: 32px;
+  height: 36px;
+  background: var(--orange);
+  clip-path: path('M16 0 L32 6 L32 22 Q32 32 16 36 Q0 32 0 22 L0 6 Z');
+  position: relative;
+}
+
+.logo-icon::before {
+  content: '';
+  position: absolute;
+  top: 9px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: white;
+}
+
+.logo-icon::after {
+  content: '';
+  position: absolute;
+  top: 18px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 14px;
+  height: 8px;
+  border-radius: 50% 50% 0 0;
+  background: white;
+}
+
+.nav-cta {
+  background: var(--orange);
+  color: white;
+  padding: 12px 24px;
+  border-radius: 100px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 14px;
+  transition: all 0.2s;
+  box-shadow: 0 4px 12px rgba(255,107,53,0.25);
+}
+
+.nav-cta:hover {
+  background: var(--orange-dark);
+  transform: translateY(-1px);
+}
+
+/* ============= HERO ============= */
+.hero {
+  background: linear-gradient(180deg, var(--paper) 0%, var(--white) 100%);
+  padding: 60px 0 80px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -100px;
+  right: -100px;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(255,107,53,0.08) 0%, transparent 70%);
+  border-radius: 50%;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 60px;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--orange-light);
+  color: var(--orange-dark);
+  padding: 8px 16px;
+  border-radius: 100px;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 24px;
+  letter-spacing: 0.5px;
+}
+
+.hero-badge .dot {
+  width: 8px;
+  height: 8px;
+  background: var(--green);
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+.hero h1 {
+  font-family: 'Fraunces', serif;
+  font-size: clamp(40px, 6vw, 64px);
+  font-weight: 900;
+  line-height: 1.05;
+  letter-spacing: -2px;
+  margin-bottom: 24px;
+  color: var(--ink);
+}
+
+.hero h1 .highlight {
+  color: var(--orange);
+  font-style: italic;
+  position: relative;
+  display: inline-block;
+}
+
+.hero h1 .highlight::after {
+  content: '';
+  position: absolute;
+  bottom: 4px;
+  left: 0;
+  right: 0;
+  height: 8px;
+  background: var(--orange-light);
+  z-index: -1;
+  border-radius: 4px;
+}
+
+.hero p.lead {
+  font-size: 19px;
+  color: var(--grey);
+  margin-bottom: 32px;
+  max-width: 540px;
+  line-height: 1.6;
+}
+
+.hero-cta-group {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+.btn-primary {
+  background: var(--orange);
+  color: white;
+  padding: 18px 32px;
+  border-radius: 100px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 16px;
+  transition: all 0.2s;
+  box-shadow: 0 8px 24px rgba(255,107,53,0.35);
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background: var(--orange-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px rgba(255,107,53,0.45);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--ink);
+  padding: 18px 28px;
+  border-radius: 100px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 16px;
+  border: 2px solid var(--ink);
+  transition: all 0.2s;
+}
+
+.btn-secondary:hover {
+  background: var(--ink);
+  color: white;
+}
+
+.hero-trust {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  align-items: center;
+  padding-top: 24px;
+  border-top: 1px solid var(--grey-light);
+}
+
+.trust-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  color: var(--grey);
+  font-weight: 600;
+}
+
+.trust-icon {
+  width: 24px;
+  height: 24px;
+  background: var(--orange-light);
+  color: var(--orange);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+/* HERO VISUAL */
+.hero-visual {
+  position: relative;
+  height: 540px;
+}
+
+.hero-card {
+  position: absolute;
+  background: white;
+  border-radius: 24px;
+  padding: 24px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.hero-card:hover {
+  transform: translateY(-4px);
+}
+
+.hero-card-1 {
+  top: 0;
+  left: 0;
+  right: 60px;
+  height: 280px;
+  background: linear-gradient(135deg, #FF6B35 0%, #FF8B5A 100%);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+.hero-card-1::after {
+  content: '🗼';
+  position: absolute;
+  font-size: 200px;
+  right: -40px;
+  bottom: -50px;
+  opacity: 0.15;
+}
+
+.hero-card-1 .country {
+  font-family: 'Fraunces', serif;
+  font-size: 32px;
+  font-weight: 900;
+  font-style: italic;
+}
+
+.hero-card-1 .duration {
+  font-size: 13px;
+  opacity: 0.9;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.hero-card-1 .price {
+  font-size: 28px;
+  font-weight: 800;
+  margin-top: 8px;
+}
+
+.hero-card-1 .price-label {
+  font-size: 12px;
+  opacity: 0.85;
+}
+
+.hero-card-2 {
+  bottom: 0;
+  left: 40px;
+  width: 280px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.avatar-stack {
+  display: flex;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 3px solid white;
+  margin-left: -10px;
+  background: linear-gradient(135deg, #FF6B35, #FFB088);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.avatar:first-child { margin-left: 0; background: linear-gradient(135deg, #047857, #34D399); }
+.avatar:nth-child(2) { background: linear-gradient(135deg, #1E40AF, #60A5FA); }
+.avatar:nth-child(3) { background: linear-gradient(135deg, #7C3AED, #C4B5FD); }
+
+.hero-card-2-text {
+  flex: 1;
+}
+
+.hero-card-2-text strong {
+  display: block;
+  font-size: 15px;
+  color: var(--ink);
+}
+
+.hero-card-2-text span {
+  font-size: 12px;
+  color: var(--grey);
+}
+
+.hero-card-3 {
+  top: 100px;
+  right: 0;
+  width: 240px;
+  background: white;
+  padding: 20px;
+}
+
+.hero-card-3 .stars {
+  color: #FBBF24;
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.hero-card-3 .review {
+  font-size: 14px;
+  color: var(--ink);
+  font-weight: 600;
+  margin-bottom: 8px;
+  line-height: 1.4;
+}
+
+.hero-card-3 .reviewer {
+  font-size: 12px;
+  color: var(--grey);
+}
+
+/* ============= LOGO BAR ============= */
+.logo-bar {
+  background: var(--paper);
+  padding: 50px 0;
+  text-align: center;
+}
+
+.logo-bar-title {
+  font-size: 13px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--grey);
+  margin-bottom: 30px;
+  font-weight: 600;
+}
+
+.logo-bar-grid {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 40px;
+  align-items: center;
+  opacity: 0.6;
+}
+
+.logo-bar-item {
+  font-family: 'Fraunces', serif;
+  font-weight: 700;
+  font-size: 18px;
+  color: var(--grey);
+  letter-spacing: 1px;
+}
+
+/* ============= PROBLEM-SOLUTION ============= */
+.section {
+  padding: 100px 0;
+}
+
+.section-header {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 60px;
+}
+
+.section-eyebrow {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--orange);
+  margin-bottom: 16px;
+  font-weight: 700;
+}
+
+.section-title {
+  font-family: 'Fraunces', serif;
+  font-size: clamp(36px, 5vw, 52px);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -1.5px;
+  margin-bottom: 20px;
+}
+
+.section-title .italic { font-style: italic; color: var(--orange); }
+
+.section-desc {
+  font-size: 18px;
+  color: var(--grey);
+  line-height: 1.6;
+}
+
+/* PROBLEM SECTION */
+.problem-section {
+  background: var(--ink);
+  color: white;
+}
+
+.problem-section .section-eyebrow { color: var(--orange-light); }
+
+.problem-section .section-title { color: white; }
+
+.problem-section .section-desc { color: rgba(255,255,255,0.7); }
+
+.problem-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 50px;
+}
+
+.problem-card {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 20px;
+  padding: 32px;
+  transition: all 0.3s;
+}
+
+.problem-card:hover {
+  background: rgba(255,255,255,0.08);
+  transform: translateY(-4px);
+}
+
+.problem-icon {
+  width: 56px;
+  height: 56px;
+  background: rgba(255,107,53,0.15);
+  color: var(--orange);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.problem-card h3 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: white;
+}
+
+.problem-card p {
+  font-size: 15px;
+  color: rgba(255,255,255,0.7);
+  line-height: 1.6;
+}
+
+/* ============= SOLUTION ============= */
+.solution-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-top: 60px;
+}
+
+.solution-card {
+  background: white;
+  border: 1px solid var(--grey-light);
+  border-radius: 24px;
+  padding: 40px 32px;
+  transition: all 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+
+.solution-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--orange);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s;
+}
+
+.solution-card:hover {
+  border-color: var(--orange);
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(255,107,53,0.15);
+}
+
+.solution-card:hover::before { transform: scaleX(1); }
+
+.solution-num {
+  font-family: 'Fraunces', serif;
+  font-style: italic;
+  font-size: 80px;
+  font-weight: 900;
+  color: var(--orange-light);
+  line-height: 1;
+  margin-bottom: -20px;
+}
+
+.solution-card h3 {
+  font-family: 'Fraunces', serif;
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  letter-spacing: -0.5px;
+}
+
+.solution-card p {
+  font-size: 15px;
+  color: var(--grey);
+  line-height: 1.7;
+  margin-bottom: 24px;
+}
+
+.solution-features {
+  list-style: none;
+}
+
+.solution-features li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 8px 0;
+  font-size: 14px;
+  color: var(--ink);
+  font-weight: 500;
+}
+
+.solution-features li::before {
+  content: '✓';
+  color: var(--orange);
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+/* ============= DESTINATIONS ============= */
+.destinations-section {
+  background: var(--paper);
+}
+
+.dest-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-top: 50px;
+}
+
+.dest-card {
+  position: relative;
+  height: 280px;
+  border-radius: 20px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 24px;
+  color: white;
+}
+
+.dest-card:hover {
+  transform: translateY(-6px);
+}
+
+.dest-card-1 { background: linear-gradient(135deg, #DC2626, #FCA5A5), url(); }
+.dest-card-2 { background: linear-gradient(135deg, #1E40AF, #93C5FD); }
+.dest-card-3 { background: linear-gradient(135deg, #DC2626, #F87171); }
+.dest-card-4 { background: linear-gradient(135deg, #047857, #6EE7B7); }
+.dest-card-5 { background: linear-gradient(135deg, #C2410C, #FDBA74); }
+.dest-card-6 { background: linear-gradient(135deg, #1F2937, #6B7280); }
+.dest-card-7 { background: linear-gradient(135deg, #7C2D12, #FB923C); }
+.dest-card-8 { background: linear-gradient(135deg, #166534, #86EFAC); }
+
+.dest-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 0%, rgba(0,0,0,0.7) 100%);
+}
+
+.dest-flag {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 32px;
+  z-index: 1;
+}
+
+.dest-content {
+  position: relative;
+  z-index: 1;
+}
+
+.dest-content h3 {
+  font-family: 'Fraunces', serif;
+  font-size: 26px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  margin-bottom: 6px;
+}
+
+.dest-content p {
+  font-size: 13px;
+  opacity: 0.9;
+}
+
+/* ============= STATS ============= */
+.stats-section {
+  background: linear-gradient(135deg, var(--orange) 0%, var(--orange-dark) 100%);
+  color: white;
+  padding: 80px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.stats-section::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -10%;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+  border-radius: 50%;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  position: relative;
+  z-index: 1;
+}
+
+.stat {
+  text-align: center;
+}
+
+.stat-num {
+  font-family: 'Fraunces', serif;
+  font-size: 64px;
+  font-weight: 900;
+  line-height: 1;
+  margin-bottom: 8px;
+  font-style: italic;
+}
+
+.stat-label {
+  font-size: 14px;
+  opacity: 0.9;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-weight: 600;
+}
+
+/* ============= TESTIMONIALS ============= */
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 50px;
+}
+
+.testimonial {
+  background: white;
+  border: 1px solid var(--grey-light);
+  border-radius: 24px;
+  padding: 32px;
+  transition: all 0.3s;
+}
+
+.testimonial:hover {
+  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+  transform: translateY(-4px);
+}
+
+.testimonial-stars {
+  color: #FBBF24;
+  font-size: 18px;
+  margin-bottom: 16px;
+  letter-spacing: 2px;
+}
+
+.testimonial-text {
+  font-family: 'Fraunces', serif;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.5;
+  color: var(--ink);
+  margin-bottom: 24px;
+  letter-spacing: -0.3px;
+}
+
+.testimonial-author {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.testimonial-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--orange), var(--orange-dark));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 700;
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+.testimonial-author-info strong {
+  display: block;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.testimonial-author-info span {
+  font-size: 13px;
+  color: var(--grey);
+}
+
+/* ============= PROCESS ============= */
+.process-section {
+  background: var(--ink);
+  color: white;
+}
+
+.process-section .section-title { color: white; }
+.process-section .section-eyebrow { color: var(--orange-light); }
+.process-section .section-desc { color: rgba(255,255,255,0.7); }
+
+.process-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+  margin-top: 60px;
+  position: relative;
+}
+
+.process-step {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 20px;
+  padding: 28px 20px;
+  text-align: center;
+  position: relative;
+  transition: all 0.3s;
+}
+
+.process-step:hover {
+  background: rgba(255,107,53,0.1);
+  border-color: var(--orange);
+  transform: translateY(-4px);
+}
+
+.process-num {
+  width: 44px;
+  height: 44px;
+  background: var(--orange);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 18px;
+  margin: 0 auto 16px;
+}
+
+.process-step h4 {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.process-step p {
+  font-size: 13px;
+  color: rgba(255,255,255,0.6);
+  line-height: 1.5;
+}
+
+/* ============= COMPARISON ============= */
+.comparison-table {
+  background: white;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.06);
+  border: 1px solid var(--grey-light);
+  margin-top: 60px;
+}
+
+.comp-row {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr;
+  border-bottom: 1px solid var(--grey-light);
+}
+
+.comp-row:last-child { border-bottom: none; }
+
+.comp-row.header {
+  background: var(--paper);
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.comp-cell {
+  padding: 20px 24px;
+  border-right: 1px solid var(--grey-light);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 15px;
+}
+
+.comp-cell:last-child { border-right: none; }
+
+.comp-cell.highlight {
+  background: var(--orange-light);
+  font-weight: 600;
+}
+
+.comp-cell.highlight .check {
+  color: var(--orange);
+  font-weight: 800;
+  font-size: 18px;
+}
+
+.comp-cell .x {
+  color: #DC2626;
+  font-weight: 700;
+}
+
+.comp-cell .check {
+  color: var(--green);
+  font-weight: 700;
+  font-size: 18px;
+}
+
+/* ============= URGENCY CTA ============= */
+.urgency-section {
+  background: linear-gradient(135deg, var(--orange) 0%, var(--orange-dark) 100%);
+  padding: 80px 0;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.urgency-section::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 400px;
+  height: 100%;
+  background: radial-gradient(circle, rgba(255,255,255,0.15) 0%, transparent 70%);
+}
+
+.urgency-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 60px;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.urgency-section h2 {
+  font-family: 'Fraunces', serif;
+  font-size: 48px;
+  font-weight: 900;
+  line-height: 1.1;
+  letter-spacing: -1.5px;
+  margin-bottom: 20px;
+}
+
+.urgency-section h2 .italic { font-style: italic; }
+
+.urgency-section p {
+  font-size: 18px;
+  opacity: 0.95;
+  margin-bottom: 32px;
+  line-height: 1.6;
+}
+
+.countdown {
+  background: rgba(0,0,0,0.2);
+  border-radius: 20px;
+  padding: 24px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-bottom: 32px;
+  backdrop-filter: blur(10px);
+}
+
+.countdown-item {
+  text-align: center;
+}
+
+.countdown-num {
+  font-family: 'Fraunces', serif;
+  font-size: 40px;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.countdown-label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  opacity: 0.85;
+  margin-top: 4px;
+}
+
+.urgency-form {
+  background: white;
+  color: var(--ink);
+  border-radius: 24px;
+  padding: 40px;
+  box-shadow: 0 30px 60px rgba(0,0,0,0.2);
+}
+
+.form-title {
+  font-family: 'Fraunces', serif;
+  font-size: 26px;
+  font-weight: 800;
+  margin-bottom: 8px;
+  letter-spacing: -0.5px;
+}
+
+.form-subtitle {
+  font-size: 14px;
+  color: var(--grey);
+  margin-bottom: 24px;
+}
+
+.form-group {
+  margin-bottom: 16px;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 14px 18px;
+  border: 1.5px solid var(--grey-light);
+  border-radius: 12px;
+  font-size: 15px;
+  font-family: inherit;
+  transition: border 0.2s;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: var(--orange);
+}
+
+.form-cta {
+  width: 100%;
+  background: var(--orange);
+  color: white;
+  padding: 16px;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s;
+  margin-top: 8px;
+}
+
+.form-cta:hover {
+  background: var(--orange-dark);
+  transform: translateY(-1px);
+}
+
+.form-disclaimer {
+  font-size: 12px;
+  color: var(--grey);
+  text-align: center;
+  margin-top: 12px;
+}
+
+/* ============= FAQ ============= */
+.faq-list {
+  max-width: 800px;
+  margin: 50px auto 0;
+}
+
+.faq-item {
+  border: 1px solid var(--grey-light);
+  border-radius: 16px;
+  margin-bottom: 12px;
+  overflow: hidden;
+  transition: all 0.2s;
+}
+
+.faq-item:hover { border-color: var(--orange); }
+
+.faq-question {
+  padding: 22px 28px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--ink);
+  background: white;
+}
+
+.faq-question::after {
+  content: '+';
+  font-size: 24px;
+  color: var(--orange);
+  transition: transform 0.2s;
+  font-weight: 300;
+}
+
+.faq-item.open .faq-question::after { transform: rotate(45deg); }
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s, padding 0.3s;
+  padding: 0 28px;
+  color: var(--grey);
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.faq-item.open .faq-answer {
+  max-height: 300px;
+  padding: 0 28px 22px;
+}
+
+/* ============= FINAL CTA ============= */
+.final-cta {
+  background: var(--ink);
+  padding: 100px 0;
+  text-align: center;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.final-cta::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 800px;
+  height: 800px;
+  background: radial-gradient(circle, rgba(255,107,53,0.2) 0%, transparent 60%);
+  border-radius: 50%;
+}
+
+.final-cta-content {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.final-cta h2 {
+  font-family: 'Fraunces', serif;
+  font-size: clamp(40px, 6vw, 64px);
+  font-weight: 900;
+  line-height: 1.1;
+  letter-spacing: -2px;
+  margin-bottom: 20px;
+}
+
+.final-cta h2 .italic { font-style: italic; color: var(--orange); }
+
+.final-cta p {
+  font-size: 19px;
+  opacity: 0.85;
+  margin-bottom: 40px;
+  line-height: 1.6;
+}
+
+/* ============= FOOTER ============= */
+.footer {
+  background: #050505;
+  color: rgba(255,255,255,0.6);
+  padding: 60px 0 30px;
+  font-size: 14px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.footer h4 {
+  color: white;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+
+.footer ul {
+  list-style: none;
+}
+
+.footer ul li {
+  margin-bottom: 10px;
+}
+
+.footer ul a {
+  color: rgba(255,255,255,0.6);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.footer ul a:hover { color: var(--orange); }
+
+.footer-brand p {
+  margin-top: 16px;
+  line-height: 1.6;
+}
+
+.footer-bottom {
+  padding-top: 30px;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+  font-size: 13px;
+}
+
+/* ============= FLOATING WA ============= */
+.float-wa {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 60px;
+  height: 60px;
+  background: #25D366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 30px rgba(37,211,102,0.4);
+  z-index: 99;
+  cursor: pointer;
+  transition: transform 0.2s;
+  text-decoration: none;
+  font-size: 28px;
+}
+
+.float-wa:hover { transform: scale(1.1); }
+
+/* ============= RESPONSIVE ============= */
+@media (max-width: 968px) {
+  .hero-grid,
+  .urgency-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .hero-visual { height: 400px; }
+  .problem-grid,
+  .solution-grid,
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+  .dest-grid { grid-template-columns: repeat(2, 1fr); }
+  .process-grid { grid-template-columns: repeat(2, 1fr); }
+  .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 40px; }
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+  .comp-row { grid-template-columns: 1fr; }
+  .comp-cell { border-right: none; border-bottom: 1px solid var(--grey-light); }
+  .countdown { grid-template-columns: repeat(2, 1fr); }
+  .section { padding: 60px 0; }
+  .nav-cta { padding: 10px 18px; font-size: 13px; }
+}
+</style>
+</head>
+<body>
+
+<!-- ============= NAV ============= -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="#" class="logo">
+      <div class="logo-icon"></div>
+      jagatrip
+    </a>
+    <a href="#kontak" class="nav-cta">Konsultasi Gratis →</a>
+  </div>
+</nav>
+
+<!-- ============= HERO ============= -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-grid">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="dot"></span>
+          Pendaftaran Edutrip 2026 Sekarang Dibuka
+        </div>
+        <h1>
+          Buka Jendela <span class="highlight">Dunia</span> untuk Generasi Indonesia.
+        </h1>
+        <p class="lead">
+          Kami antar siswa & mahasiswa Anda menjelajah dunia dengan aman, belajar dari setiap perjalanan, dan kembali sebagai pribadi yang lebih kaya wawasan, karakter, dan kontribusi bagi bangsa.
+        </p>
+        <div class="hero-cta-group">
+          <a href="#kontak" class="btn-primary">
+            Konsultasi Gratis Sekarang →
+          </a>
+          <a href="#paket" class="btn-secondary">Lihat Paket Edutrip</a>
+        </div>
+        <div class="hero-trust">
+          <div class="trust-item">
+            <div class="trust-icon">✓</div>
+            Tour Leader Bersertifikat
+          </div>
+          <div class="trust-item">
+            <div class="trust-icon">✓</div>
+            Asuransi 100% Peserta
+          </div>
+          <div class="trust-item">
+            <div class="trust-icon">✓</div>
+            Kurikulum-Aligned
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="hero-card hero-card-1">
+          <div>
+            <div class="duration">Edutrip · 7 Hari</div>
+            <div class="country">Tokyo</div>
+          </div>
+          <div>
+            <div class="price-label">Mulai dari</div>
+            <div class="price">Rp 18.5 jt</div>
+          </div>
+        </div>
+
+        <div class="hero-card hero-card-3">
+          <div class="stars">★★★★★</div>
+          <div class="review">"Anak saya pulang dengan pribadi yang berbeda. Lebih mandiri, lebih percaya diri."</div>
+          <div class="reviewer">— Ibu Sari, Orang Tua Peserta</div>
+        </div>
+
+        <div class="hero-card hero-card-2">
+          <div class="avatar-stack">
+            <div class="avatar">A</div>
+            <div class="avatar">R</div>
+            <div class="avatar">M</div>
+            <div class="avatar">+</div>
+          </div>
+          <div class="hero-card-2-text">
+            <strong>500+ Siswa Berangkat</strong>
+            <span>Tahun ini bersama JAGATRIP</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============= LOGO BAR ============= -->
+<section class="logo-bar">
+  <div class="container">
+    <div class="logo-bar-title">— Dipercaya oleh Sekolah & Kampus Indonesia —</div>
+    <div class="logo-bar-grid">
+      <div class="logo-bar-item">SMA AL-FATIHAH</div>
+      <div class="logo-bar-item">UNIV. NUSANTARA</div>
+      <div class="logo-bar-item">SMK GLOBAL</div>
+      <div class="logo-bar-item">SMA RAMAH</div>
+      <div class="logo-bar-item">SMP ALMADINAH</div>
+      <div class="logo-bar-item">YAYASAN AIS</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============= PROBLEM SECTION ============= -->
+<section class="section problem-section">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-eyebrow">Masalahnya</div>
+      <h2 class="section-title">Mengantar siswa ke luar negeri itu <span class="italic">tidak sederhana.</span></h2>
+      <p class="section-desc">Banyak sekolah ingin memberi pengalaman global pada siswanya — tapi terbentur 3 hal ini:</p>
+    </div>
+
+    <div class="problem-grid">
+      <div class="problem-card">
+        <div class="problem-icon">⚠️</div>
+        <h3>Khawatir Keselamatan</h3>
+        <p>Membawa puluhan siswa ke luar negeri = ratusan pertanyaan dari orang tua. Bagaimana kalau ada yang sakit? Hilang paspor? Asuransi cukup? Tour leader ada 24 jam?</p>
+      </div>
+
+      <div class="problem-card">
+        <div class="problem-icon">📚</div>
+        <h3>Kurang Edukatif</h3>
+        <p>Travel agent biasa menawarkan paket wisata standar — foto di depan landmark, belanja oleh-oleh. Tidak ada nilai pembelajaran, tidak terhubung dengan kurikulum sekolah.</p>
+      </div>
+
+      <div class="problem-card">
+        <div class="problem-icon">💸</div>
+        <h3>Harga Tidak Transparan</h3>
+        <p>Banyak penyelenggara yang menyembunyikan biaya, menambahkan charge mendadak, atau memberi fasilitas yang tidak sesuai janji. Sekolah jadi sulit dipercaya orang tua.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============= SOLUTION SECTION ============= -->
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-eyebrow">Solusinya</div>
+      <h2 class="section-title">Inilah cara <span class="italic">JAGATRIP berbeda.</span></h2>
+      <p class="section-desc">Kami bukan travel agent yang menambahkan elemen edukasi. Kami adalah mitra edukasi yang menggunakan travel sebagai metode pembelajaran.</p>
+    </div>
+
+    <div class="solution-grid">
+      <div class="solution-card">
+        <div class="solution-num">01</div>
+        <h3>Education-First, Not Travel-First</h3>
+        <p>Setiap itinerary kami dirancang berbasis kurikulum sekolah, bukan sekadar destinasi. Setiap kunjungan punya learning objective yang jelas.</p>
+        <ul class="solution-features">
+          <li>Itinerary kurikulum-aligned</li>
+          <li>Learning objective per kunjungan</li>
+          <li>Sertifikat & laporan refleksi</li>
+          <li>Buku jurnal edukatif peserta</li>
+        </ul>
+      </div>
+
+      <div class="solution-card">
+        <div class="solution-num">02</div>
+        <h3>Indonesia Soul, Global Standard</h3>
+        <p>Kami memahami konteks Indonesia (sekolah, keluarga, kearifan lokal) sambil mengoperasikan standar internasional dalam safety dan quality.</p>
+        <ul class="solution-features">
+          <li>Tour leader sertifikasi HPI</li>
+          <li>Mitra resmi land operator global</li>
+          <li>Makanan halal & ibadah terjamin</li>
+          <li>Komunikasi bahasa Indonesia</li>
+        </ul>
+      </div>
+
+      <div class="solution-card">
+        <div class="solution-num">03</div>
+        <h3>Guardian-Level Care</h3>
+        <p>Logo kami adalah perisai dengan orang di dalam — bukan kebetulan. Kami memperlakukan setiap peserta seperti keluarga sendiri.</p>
+        <ul class="solution-features">
+          <li>Pendampingan 24/7 selama trip</li>
+          <li>Asuransi internasional 100%</li>
+          <li>Laporan harian ke orang tua</li>
+          <li>Briefing pra-keberangkatan</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============= STATS ============= -->
+<section class="stats-section">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat">
+        <div class="stat-num">7+</div>
+        <div class="stat-label">Negara Tujuan</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">500+</div>
+        <div class="stat-label">Siswa Tahun Ini</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">50+</div>
+        <div class="stat-label">Sekolah Mitra</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">100%</div>
+        <div class="stat-label">Safety Record</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============= DESTINATIONS ============= -->
+<section class="section destinations-section" id="paket">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-eyebrow">Destinasi Edutrip</div>
+      <h2 class="section-title">Dunia adalah <span class="italic">ruang kelas terbesar.</span></h2>
+      <p class="section-desc">Kami siapkan kunjungan pendidikan ke 7 negara dengan kurikulum yang berbeda untuk tiap destinasi.</p>
+    </div>
+
+    <div class="dest-grid">
+      <div class="dest-card dest-card-1">
+        <div class="dest-flag">🇯🇵</div>
+        <div class="dest-content">
+          <h3>Jepang</h3>
+          <p>Tokyo · Kyoto · Osaka — Teknologi & Disiplin</p>
+        </div>
+      </div>
+      <div class="dest-card dest-card-2">
+        <div class="dest-flag">🇰🇷</div>
+        <div class="dest-content">
+          <h3>Korea Selatan</h3>
+          <p>Seoul · Busan — K-Culture & Innovation</p>
+        </div>
+      </div>
+      <div class="dest-card dest-card-3">
+        <div class="dest-flag">🇸🇬</div>
+        <div class="dest-content">
+          <h3>Singapura</h3>
+          <p>Smart City & Pendidikan Tinggi</p>
+        </div>
+      </div>
+      <div class="dest-card dest-card-4">
+        <div class="dest-flag">🇲🇾</div>
+        <div class="dest-content">
+          <h3>Malaysia</h3>
+          <p>KL · Penang — Multicultural Hub</p>
+        </div>
+      </div>
+      <div class="dest-card dest-card-5">
+        <div class="dest-flag">🇦🇺</div>
+        <div class="dest-content">
+          <h3>Australia</h3>
+          <p>Sydney · Melbourne — Top University</p>
+        </div>
+      </div>
+      <div class="dest-card dest-card-6">
+        <div class="dest-flag">🇹🇷</div>
+        <div class="dest-content">
+          <h3>Turki</h3>
+          <p>Istanbul · Cappadocia — Sejarah Peradaban</p>
+        </div>
+      </div>
+      <div class="dest-card dest-card-7">
+        <div class="dest-flag">🇪🇬</div>
+        <div class="dest-content">
+          <h3>Mesir</h3>
+          <p>Cairo · Alexandria — Cradle of Civilization</p>
+        </div>
+      </div>
+      <div class="dest-card dest-card-8">
+        <div class="dest-flag">🇸🇦</div>
+        <div class="dest-content">
+          <h3>Arab Saudi</h3>
+          <p>Mecca · Madinah — Spiritual Journey</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============= COMPARISON ============= -->
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-eyebrow">Bandingkan</div>
+      <h2 class="section-title">JAGATRIP vs <span class="italic">Travel Biasa.</span></h2>
+      <p class="section-desc">Lihat sendiri kenapa 50+ sekolah memilih JAGATRIP untuk edutrip mereka.</p>
+    </div>
+
+    <div class="comparison-table">
+      <div class="comp-row header">
+        <div class="comp-cell">Aspek</div>
+        <div class="comp-cell">Travel Biasa</div>
+        <div class="comp-cell highlight">JAGATRIP</div>
+      </div>
+      <div class="comp-row">
+        <div class="comp-cell"><strong>Itinerary</strong></div>
+        <div class="comp-cell"><span class="x">✗</span> Wisata umum</div>
+        <div class="comp-cell highlight"><span class="check">✓</span> Kurikulum-aligned</div>
+      </div>
+      <div class="comp-row">
+        <div class="comp-cell"><strong>Tour Leader</strong></div>
+        <div class="comp-cell"><span class="x">✗</span> Guide pariwisata</div>
+        <div class="comp-cell highlight"><span class="check">✓</span> Edu-leader bersertifikat HPI</div>
+      </div>
+      <div class="comp-row">
+        <div class="comp-cell"><strong>Asuransi</strong></div>
+        <div class="comp-cell"><span class="x">✗</span> Standar minimal</div>
+        <div class="comp-cell highlight"><span class="check">✓</span> Premium internasional</div>
+      </div>
+      <div class="comp-row">
+        <div class="comp-cell"><strong>Laporan ke Ortu</strong></div>
+        <div class="comp-cell"><span class="x">✗</span> Tidak ada</div>
+        <div class="comp-cell highlight"><span class="check">✓</span> Update harian via WA</div>
+      </div>
+      <div class="comp-row">
+        <div class="comp-cell"><strong>Kebutuhan Halal & Ibadah</strong></div>
+        <div class="comp-cell"><span class="x">✗</span> Tidak terjamin</div>
+        <div class="comp-cell highlight"><span class="check">✓</span> Terjamin penuh</div>
+      </div>
+      <div class="comp-row">
+        <div class="comp-cell"><strong>Sertifikat & Refleksi</strong></div>
+        <div class="comp-cell"><span class="x">✗</span> Tidak ada</div>
+        <div class="comp-cell highlight"><span class="check">✓</span> Sertifikat + jurnal edukatif</div>
+      </div>
+      <div class="comp-row">
+        <div class="comp-cell"><strong>Transparansi Biaya</strong></div>
+        <div class="comp-cell"><span class="x">✗</span> Sering ada hidden cost</div>
+        <div class="comp-cell highlight"><span class="check">✓</span> All-in, tanpa biaya tersembunyi</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============= TESTIMONIALS ============= -->
+<section class="section" style="background: var(--paper);">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-eyebrow">Yang Mereka Katakan</div>
+      <h2 class="section-title">Lebih dari sekadar liburan — ini <span class="italic">pengalaman yang mengubah hidup.</span></h2>
+    </div>
+
+    <div class="testimonials-grid">
+      <div class="testimonial">
+        <div class="testimonial-stars">★★★★★</div>
+        <div class="testimonial-text">"Anak saya pulang dengan pribadi yang berbeda. Lebih mandiri, lebih percaya diri, dan lebih semangat belajar. JAGATRIP bukan travel biasa — ini investasi pendidikan."</div>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">SR</div>
+          <div class="testimonial-author-info">
+            <strong>Ibu Sari Rahmawati</strong>
+            <span>Orang Tua Peserta · SMA Al-Fatihah</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial">
+        <div class="testimonial-stars">★★★★★</div>
+        <div class="testimonial-text">"Sebagai kepala sekolah, saya memerlukan partner yang serius dalam pendidikan, bukan sekadar travel. JAGATRIP adalah jawabannya. Itinerary mereka bahkan lebih edukatif dari ekspektasi kami."</div>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">BH</div>
+          <div class="testimonial-author-info">
+            <strong>Bapak H. Hidayat, M.Pd</strong>
+            <span>Kepala Sekolah · SMA Ramah Indonesia</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial">
+        <div class="testimonial-stars">★★★★★</div>
+        <div class="testimonial-text">"Saya pikir ke Tokyo cuma foto-foto. Ternyata kami diajak ke universitas, bertemu mahasiswa Indonesia di sana, dan ikut workshop. Saya jadi tahu mau kuliah di mana nanti!"</div>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">AR</div>
+          <div class="testimonial-author-info">
+            <strong>Ahmad Rizky, 17</strong>
+            <span>Peserta Edutrip Jepang 2026</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============= PROCESS ============= -->
+<section class="section process-section">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-eyebrow">Cara Kerja Kami</div>
+      <h2 class="section-title">5 Tahap, <span class="italic">1 Pengalaman Tak Terlupakan.</span></h2>
+      <p class="section-desc">Setiap perjalanan JAGATRIP dirancang dengan metodologi 5 tahap yang teruji.</p>
+    </div>
+
+    <div class="process-grid">
+      <div class="process-step">
+        <div class="process-num">1</div>
+        <h4>Konsultasi Gratis</h4>
+        <p>Pemetaan kebutuhan sekolah, target peserta, dan anggaran.</p>
+      </div>
+      <div class="process-step">
+        <div class="process-num">2</div>
+        <h4>Itinerary Custom</h4>
+        <p>Penyusunan itinerary kurikulum-aligned sesuai mata pelajaran.</p>
+      </div>
+      <div class="process-step">
+        <div class="process-num">3</div>
+        <h4>Pra-Keberangkatan</h4>
+        <p>Briefing peserta, pengurusan dokumen, & pengecekan akhir.</p>
+      </div>
+      <div class="process-step">
+        <div class="process-num">4</div>
+        <h4>Perjalanan</h4>
+        <p>Pendampingan 24/7 dengan tour leader bersertifikat HPI.</p>
+      </div>
+      <div class="process-step">
+        <div class="process-num">5</div>
+        <h4>Pasca-Trip</h4>
+        <p>Evaluasi, sertifikat, jurnal refleksi, & alumni network.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============= URGENCY CTA + FORM ============= -->
+<section class="urgency-section" id="kontak">
+  <div class="container">
+    <div class="urgency-grid">
+      <div>
+        <div class="hero-badge" style="background: rgba(255,255,255,0.2); color: white;">
+          <span class="dot"></span>
+          Penawaran Terbatas Pendaftaran 2026
+        </div>
+        <h2>
+          Early Bird Discount: <span class="italic">Hemat 15%</span>
+        </h2>
+        <p>
+          Sekolah yang mendaftar sebelum tanggal cutoff dapat early bird discount + bonus 1 free seat untuk guru pendamping. Jangan lewatkan kesempatan ini.
+        </p>
+
+        <div class="countdown">
+          <div class="countdown-item">
+            <div class="countdown-num">14</div>
+            <div class="countdown-label">Hari</div>
+          </div>
+          <div class="countdown-item">
+            <div class="countdown-num">08</div>
+            <div class="countdown-label">Jam</div>
+          </div>
+          <div class="countdown-item">
+            <div class="countdown-num">42</div>
+            <div class="countdown-label">Menit</div>
+          </div>
+          <div class="countdown-item">
+            <div class="countdown-num">15</div>
+            <div class="countdown-label">Detik</div>
+          </div>
+        </div>
+
+        <div style="display: flex; gap: 12px; align-items: center; font-size: 14px;">
+          <span style="background: rgba(0,0,0,0.2); padding: 8px 16px; border-radius: 100px; font-weight: 600;">🎁 Bonus Goody Bag Lengkap</span>
+          <span style="background: rgba(0,0,0,0.2); padding: 8px 16px; border-radius: 100px; font-weight: 600;">📜 Sertifikat Resmi</span>
+        </div>
+      </div>
+
+      <div class="urgency-form">
+        <div class="form-title">Konsultasi Gratis Sekarang</div>
+        <p class="form-subtitle">Tim kami akan menghubungi Anda dalam 1×24 jam.</p>
+
+        <div class="form-group">
+          <input type="text" placeholder="Nama Lengkap*" required>
+        </div>
+        <div class="form-group">
+          <input type="text" placeholder="Nama Sekolah/Instansi*" required>
+        </div>
+        <div class="form-group">
+          <input type="tel" placeholder="No. WhatsApp*" required>
+        </div>
+        <div class="form-group">
+          <select required>
+            <option value="">Negara Tujuan*</option>
+            <option>Jepang</option>
+            <option>Korea Selatan</option>
+            <option>Singapura</option>
+            <option>Malaysia</option>
+            <option>Australia</option>
+            <option>Turki</option>
+            <option>Mesir</option>
+            <option>Saudi Arabia</option>
+            <option>Belum Pasti</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <select required>
+            <option value="">Estimasi Jumlah Peserta*</option>
+            <option>10-20 orang</option>
+            <option>21-50 orang</option>
+            <option>51-100 orang</option>
+            <option>100+ orang</option>
+          </select>
+        </div>
+
+        <button class="form-cta">Dapatkan Penawaran Khusus →</button>
+        <p class="form-disclaimer">🔒 Data Anda aman. Tidak ada spam.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============= FAQ ============= -->
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-eyebrow">Pertanyaan Umum</div>
+      <h2 class="section-title">Yang sering ditanyakan <span class="italic">kepala sekolah & orang tua.</span></h2>
+    </div>
+
+    <div class="faq-list">
+      <div class="faq-item open">
+        <div class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+          Apakah JAGATRIP punya legalitas resmi?
+        </div>
+        <div class="faq-answer">
+          Ya. Kami terdaftar resmi sebagai PT JAGATRIP MITRA EDUKASI dengan NIB, Sertifikat Standar Usaha Pariwisata, dan keanggotaan asosiasi resmi (ASITA). Semua dokumen legalitas tersedia untuk verifikasi sekolah dan orang tua.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+          Bagaimana sistem keamanan & asuransi peserta?
+        </div>
+        <div class="faq-answer">
+          Setiap peserta dilindungi asuransi travel internasional premium yang mencakup kesehatan, kecelakaan, kehilangan dokumen, dan keterlambatan penerbangan. Tour leader bersertifikat HPI mendampingi 24/7. Update harian dikirim ke orang tua via WhatsApp grup.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+          Apakah makanan halal & jadwal ibadah terjamin?
+        </div>
+        <div class="faq-answer">
+          Tentu. Kami memahami kebutuhan peserta Muslim Indonesia. Setiap itinerary memastikan: (1) restoran halal-certified atau prepared meal, (2) jadwal sholat masuk dalam itinerary, (3) info masjid terdekat di setiap destinasi, (4) pendamping yang memahami nilai Islami.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+          Berapa minimum peserta untuk paket grup?
+        </div>
+        <div class="faq-answer">
+          Minimum 15 peserta untuk paket grup. Sekolah dengan 30+ peserta otomatis dapat 1-2 free seat untuk guru pendamping. Sekolah dengan 100+ peserta dapat customized package eksklusif dengan benefit tambahan.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+          Bagaimana jika anak saya pertama kali ke luar negeri?
+        </div>
+        <div class="faq-answer">
+          Justru ini spesialisasi kami. Sebelum keberangkatan, peserta mendapat briefing lengkap (cara di bandara, etika di luar negeri, tips komunikasi, dll). Selama trip, tour leader berbahasa Indonesia mendampingi 24 jam. Banyak alumni kami yang sebelumnya tidak pernah ke luar negeri pulang dengan kepercayaan diri yang berbeda.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+          Apakah ada sistem cicilan?
+        </div>
+        <div class="faq-answer">
+          Ya. Kami bekerja sama dengan bank mitra (BCA, Mandiri, BSI) untuk skema cicilan 6-12 bulan tanpa bunga. Untuk sekolah, tersedia juga skema kolektif: DP 30%, pelunasan H-30 keberangkatan.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+          Apa yang berbeda dari travel agent biasa?
+        </div>
+        <div class="faq-answer">
+          Tiga hal utama: (1) Education-First — itinerary kami berbasis kurikulum, bukan hiburan saja. (2) Indonesia Soul, Global Standard — kami paham budaya Indonesia + standar internasional. (3) Guardian-Level Care — kami menjaga peserta seperti anak sendiri. Logo kami bahkan adalah perisai dengan orang di dalam.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============= FINAL CTA ============= -->
+<section class="final-cta">
+  <div class="container">
+    <div class="final-cta-content">
+      <h2>Siap membuka <span class="italic">jendela dunia</span> untuk siswa Anda?</h2>
+      <p>Konsultasi gratis. Tanpa komitmen. Tim kami siap merancang edutrip yang sesuai visi sekolah Anda.</p>
+      <a href="#kontak" class="btn-primary" style="font-size: 18px; padding: 20px 40px;">
+        Mulai Konsultasi Gratis Sekarang →
+      </a>
+      <p style="margin-top: 24px; font-size: 14px; opacity: 0.6;">
+        Atau hubungi kami: 📞 +62 812-3456-7890 · ✉️ info@jagatrip.com
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ============= FOOTER ============= -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo" style="color: white;">
+          <div class="logo-icon"></div>
+          jagatrip
+        </div>
+        <p>PT JAGATRIP MITRA EDUKASI<br>Edutrip Specialist sejak 2026.<br>Membuka jendela dunia melalui pendidikan, dari Indonesia untuk peradaban global.</p>
+      </div>
+
+      <div>
+        <h4>Layanan</h4>
+        <ul>
+          <li><a href="#">Edutrip Internasional</a></li>
+          <li><a href="#">Study Tour Sekolah</a></li>
+          <li><a href="#">Cultural Exchange</a></li>
+          <li><a href="#">Campus Visit</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Perusahaan</h4>
+        <ul>
+          <li><a href="#">Tentang Kami</a></li>
+          <li><a href="#">Visi & Misi</a></li>
+          <li><a href="#">Karir</a></li>
+          <li><a href="#">Blog</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Kontak</h4>
+        <ul>
+          <li>📞 +62 812-3456-7890</li>
+          <li>✉️ info@jagatrip.com</li>
+          <li>🌐 jagatrip.com</li>
+          <li>📍 Jakarta, Indonesia</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div>© 2026 PT Jagatrip Mitra Edukasi. All rights reserved.</div>
+      <div>Privacy · Terms · Cookies</div>
+    </div>
+  </div>
+</footer>
+
+<!-- FLOATING WHATSAPP -->
+<a href="https://wa.me/6281234567890" class="float-wa" target="_blank">💬</a>
+
+<script>
+// Simple FAQ accordion already handled inline
+// Form submission demo
+document.querySelector('.form-cta').addEventListener('click', function(e){
+  e.preventDefault();
+  alert('Terima kasih! Tim JAGATRIP akan menghubungi Anda dalam 1x24 jam. 🚀');
+});
+</script>
+
+</body>
+</html>
