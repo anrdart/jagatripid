@@ -1,0 +1,31 @@
+---
+import Eyebrow from '../ui/Eyebrow.astro';
+import SectionTitle from '../ui/SectionTitle.astro';
+import rows from '../../content/comparison.json';
+---
+<section class="section" aria-labelledby="comparison-title">
+  <div class="container">
+    <div class="section-header">
+      <Eyebrow>Bandingkan</Eyebrow>
+      <SectionTitle id="comparison-title">
+        JAGATRIP vs <span class="italic">Travel Biasa.</span>
+      </SectionTitle>
+      <p class="section-desc">Lihat sendiri kenapa 50+ sekolah memilih JAGATRIP untuk edutrip mereka.</p>
+    </div>
+
+    <div class="comparison-table" role="table" aria-label="Perbandingan JAGATRIP vs Travel Biasa">
+      <div class="comp-row header" role="row">
+        <div class="comp-cell" role="columnheader">Aspek</div>
+        <div class="comp-cell" role="columnheader">Travel Biasa</div>
+        <div class="comp-cell highlight" role="columnheader">JAGATRIP</div>
+      </div>
+      {rows.map((row) => (
+        <div class="comp-row" role="row">
+          <div class="comp-cell" role="cell"><strong>{row.aspect}</strong></div>
+          <div class="comp-cell" role="cell"><span class="x">✗</span> {row.competitor}</div>
+          <div class="comp-cell highlight" role="cell"><span class="check">✓</span> {row.jagatrip}</div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

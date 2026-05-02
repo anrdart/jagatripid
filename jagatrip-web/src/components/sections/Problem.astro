@@ -1,0 +1,26 @@
+---
+import Eyebrow from '../ui/Eyebrow.astro';
+import SectionTitle from '../ui/SectionTitle.astro';
+import problems from '../../content/problems.json';
+---
+<section class="section problem-section" aria-labelledby="problem-title">
+  <div class="container">
+    <div class="section-header">
+      <Eyebrow>Masalahnya</Eyebrow>
+      <SectionTitle id="problem-title">
+        Mengantar siswa ke luar negeri itu <span class="italic">tidak sederhana.</span>
+      </SectionTitle>
+      <p class="section-desc">Banyak sekolah ingin memberi pengalaman global pada siswanya — tapi terbentur 3 hal ini:</p>
+    </div>
+
+    <div class="problem-grid">
+      {problems.map((p) => (
+        <div class="problem-card">
+          <div class="problem-icon" aria-hidden="true">{p.icon}</div>
+          <h3>{p.title}</h3>
+          <p>{p.desc}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

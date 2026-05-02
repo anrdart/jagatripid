@@ -1,0 +1,29 @@
+---
+import Eyebrow from '../ui/Eyebrow.astro';
+import SectionTitle from '../ui/SectionTitle.astro';
+import solutions from '../../content/solutions.json';
+---
+<section class="section" aria-labelledby="solution-title">
+  <div class="container">
+    <div class="section-header">
+      <Eyebrow>Solusinya</Eyebrow>
+      <SectionTitle id="solution-title">
+        Inilah cara <span class="italic">JAGATRIP berbeda.</span>
+      </SectionTitle>
+      <p class="section-desc">Kami bukan travel agent yang menambahkan elemen edukasi. Kami adalah mitra edukasi yang menggunakan travel sebagai metode pembelajaran.</p>
+    </div>
+
+    <div class="solution-grid">
+      {solutions.map((sol) => (
+        <div class="solution-card">
+          <div class="solution-num" aria-hidden="true">{sol.num}</div>
+          <h3>{sol.title}</h3>
+          <p>{sol.desc}</p>
+          <ul class="solution-features">
+            {sol.features.map((f) => <li>{f}</li>)}
+          </ul>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
