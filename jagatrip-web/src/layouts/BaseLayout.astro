@@ -13,7 +13,7 @@ interface Props {
 const {
   title = `${site.name} — Edutrip Internasional Terpercaya untuk Sekolah & Kampus Indonesia`,
   description = site.description,
-  ogImage = `${site.url}/og-default.png`,
+  ogImage = `${site.url}/og-default.svg`,
 } = Astro.props;
 
 const jsonLdSchemas = buildJsonLd(site);
@@ -61,9 +61,7 @@ const canonicalUrl = new URL(Astro.url.pathname, site.url).href;
   ))}
 </head>
 <body>
-  <a href="#main" style="position:absolute;left:-9999px;top:0;z-index:999;padding:8px 16px;background:var(--color-orange);color:white;font-weight:700;border-radius:0 0 8px 0;">
-    Lewati navigasi
-  </a>
+  <a href="#main" class="skip-link">Lewati navigasi</a>
   <slot />
 </body>
 </html>

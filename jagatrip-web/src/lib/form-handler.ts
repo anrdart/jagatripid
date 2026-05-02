@@ -12,6 +12,8 @@ export function initFormHandler(): void {
     const negara = data.get('negara') as string;
     const peserta = data.get('peserta') as string;
 
+    if (!nama || !sekolah || !wa || !negara || !peserta) return;
+
     const msg = encodeURIComponent(
       `Halo JAGATRIP! Saya ingin konsultasi edutrip:\n\n` +
       `Nama: ${nama}\nSekolah/Instansi: ${sekolah}\nNo. WA: ${wa}\n` +

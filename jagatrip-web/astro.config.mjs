@@ -20,7 +20,7 @@ export default defineConfig({
       provider: fontProviders.google(),
       name: 'Fraunces',
       cssVariable: '--font-display',
-      weights: [400, 500, 700, 900],
+      weights: [400, 500, 700, 800, 900],
       styles: ['normal', 'italic'],
     },
     {
