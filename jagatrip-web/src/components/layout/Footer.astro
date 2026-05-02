@@ -1,0 +1,56 @@
+---
+import Logo from '../brand/Logo.astro';
+import { site } from '../../data/site';
+---
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#" class="logo" style="color: white;" aria-label="JAGATRIP">
+          <Logo size={32} color="white" />
+          jagatrip
+        </a>
+        <p>
+          {site.legalName}<br />
+          Edutrip Specialist sejak {site.foundingDate}.<br />
+          Membuka jendela dunia melalui pendidikan, dari Indonesia untuk peradaban global.
+        </p>
+      </div>
+
+      <div>
+        <h4>Layanan</h4>
+        <ul>
+          <li><a href="#">Edutrip Internasional</a></li>
+          <li><a href="#">Study Tour Sekolah</a></li>
+          <li><a href="#">Cultural Exchange</a></li>
+          <li><a href="#">Campus Visit</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Perusahaan</h4>
+        <ul>
+          <li><a href="#">Tentang Kami</a></li>
+          <li><a href="#">Visi & Misi</a></li>
+          <li><a href="#">Karir</a></li>
+          <li><a href="#">Blog</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Kontak</h4>
+        <ul>
+          <li>📞 {site.phone}</li>
+          <li>✉️ {site.email}</li>
+          <li>🌐 jagatrip.com</li>
+          <li>📍 {site.address.city}, {site.address.country}</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div>© {site.foundingDate} {site.legalName}. All rights reserved.</div>
+      <div>Privacy · Terms · Cookies</div>
+    </div>
+  </div>
+</footer>

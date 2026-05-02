@@ -1,0 +1,8 @@
+---
+interface Props { style?: string; }
+const { style = '' } = Astro.props;
+---
+<div class="hero-badge" style={style}>
+  <span class="dot" aria-hidden="true"></span>
+  <slot />
+</div>
