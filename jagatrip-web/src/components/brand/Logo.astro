@@ -1,0 +1,23 @@
+---
+interface Props {
+  size?: number;
+  class?: string;
+  color?: string;
+}
+const { size = 32, class: cn = '', color = 'var(--color-orange)' } = Astro.props;
+const w = size;
+const h = Math.round(size * 36 / 32);
+---
+<svg
+  width={w}
+  height={h}
+  viewBox="0 0 32 36"
+  xmlns="http://www.w3.org/2000/svg"
+  class={cn}
+  aria-hidden="true"
+  focusable="false"
+>
+  <path d="M16 0 L32 6 L32 22 Q32 32 16 36 Q0 32 0 22 L0 6 Z" fill={color} />
+  <circle cx="16" cy="13" r="4" fill="white" />
+  <path d="M9 18 a7 4 0 0 1 14 0 L23 26 L9 26 Z" fill="white" />
+</svg>
