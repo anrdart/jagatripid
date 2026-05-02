@@ -1,0 +1,13 @@
+---
+import partners from '../../content/partners.json';
+---
+<section class="logo-bar" aria-label="Mitra sekolah dan kampus">
+  <div class="container">
+    <p class="logo-bar-title">— Dipercaya oleh Sekolah & Kampus Indonesia —</p>
+    <div class="logo-bar-grid">
+      {partners.map((name) => (
+        <div class="logo-bar-item">{name}</div>
+      ))}
+    </div>
+  </div>
+</section>

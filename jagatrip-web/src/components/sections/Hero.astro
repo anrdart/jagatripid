@@ -1,0 +1,71 @@
+---
+import HeroBadge from '../ui/HeroBadge.astro';
+import TrustItem from '../ui/TrustItem.astro';
+---
+<section class="hero">
+  <div class="container">
+    <div class="hero-grid">
+      <!-- LEFT COLUMN -->
+      <div class="hero-content">
+        <HeroBadge>
+          Pendaftaran Edutrip 2026 Sekarang Dibuka
+        </HeroBadge>
+
+        <h1>
+          Buka Jendela <span class="highlight">Dunia</span> untuk Generasi Indonesia.
+        </h1>
+
+        <p class="lead">
+          Kami antar siswa & mahasiswa Anda menjelajah dunia dengan aman, belajar dari setiap perjalanan, dan kembali sebagai pribadi yang lebih kaya wawasan, karakter, dan kontribusi bagi bangsa.
+        </p>
+
+        <div class="hero-cta-group">
+          <a href="#kontak" class="btn-primary">Konsultasi Gratis Sekarang →</a>
+          <a href="#paket" class="btn-secondary">Lihat Paket Edutrip</a>
+        </div>
+
+        <div class="hero-trust" role="list">
+          <TrustItem>Tour Leader Bersertifikat</TrustItem>
+          <TrustItem>Asuransi 100% Peserta</TrustItem>
+          <TrustItem>Kurikulum-Aligned</TrustItem>
+        </div>
+      </div>
+
+      <!-- RIGHT COLUMN — 3-card stack -->
+      <div class="hero-visual" aria-hidden="true">
+        <!-- Card 1: orange gradient, top-left -->
+        <div class="hero-card hero-card-1">
+          <div>
+            <div class="duration">Edutrip · 7 Hari</div>
+            <div class="country">Tokyo</div>
+          </div>
+          <div>
+            <div class="price-label">Mulai dari</div>
+            <div class="price">Rp 18.5 jt</div>
+          </div>
+        </div>
+
+        <!-- Card 3: white, top-right -->
+        <div class="hero-card hero-card-3">
+          <div class="stars">★★★★★</div>
+          <div class="review">"Anak saya pulang dengan pribadi yang berbeda. Lebih mandiri, lebih percaya diri."</div>
+          <div class="reviewer">— Ibu Sari, Orang Tua Peserta</div>
+        </div>
+
+        <!-- Card 2: white, bottom-left -->
+        <div class="hero-card hero-card-2">
+          <div class="avatar-stack" aria-hidden="true">
+            <div class="avatar">A</div>
+            <div class="avatar">R</div>
+            <div class="avatar">M</div>
+            <div class="avatar">+</div>
+          </div>
+          <div class="hero-card-2-text">
+            <strong>500+ Siswa Berangkat</strong>
+            <span>Tahun ini bersama JAGATRIP</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

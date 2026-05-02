@@ -1,0 +1,15 @@
+---
+import stats from '../../content/stats.json';
+---
+<section class="stats-section" aria-label="Statistik JAGATRIP">
+  <div class="container">
+    <div class="stats-grid">
+      {stats.map((stat) => (
+        <div class="stat">
+          <div class="stat-num">{stat.num}</div>
+          <div class="stat-label">{stat.label}</div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
