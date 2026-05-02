@@ -1,0 +1,55 @@
+@theme {
+  --color-orange: #FF6B35;
+  --color-orange-dark: #E85A2C;
+  --color-orange-light: #FFE4D6;
+  --color-ink: #0A0A0A;
+  --color-ink-deeper: #050505;
+  --color-grey: #6B7280;
+  --color-grey-light: #E5E7EB;
+  --color-paper: #FAF7F2;
+  --color-white: #FFFFFF;
+  --color-green: #10B981;
+  --color-wa-green: #25D366;
+  --color-star: #FBBF24;
+}
+
+:root {
+  --grad-japan:  linear-gradient(135deg, #DC2626, #FCA5A5);
+  --grad-korea:  linear-gradient(135deg, #1E40AF, #93C5FD);
+  --grad-spore:  linear-gradient(135deg, #DC2626, #F87171);
+  --grad-msia:   linear-gradient(135deg, #047857, #6EE7B7);
+  --grad-aus:    linear-gradient(135deg, #C2410C, #FDBA74);
+  --grad-turki:  linear-gradient(135deg, #1F2937, #6B7280);
+  --grad-egypt:  linear-gradient(135deg, #7C2D12, #FB923C);
+  --grad-saudi:  linear-gradient(135deg, #166534, #86EFAC);
+
+  --grad-avatar-1: linear-gradient(135deg, #047857, #34D399);
+  --grad-avatar-2: linear-gradient(135deg, #1E40AF, #60A5FA);
+  --grad-avatar-3: linear-gradient(135deg, #7C3AED, #C4B5FD);
+  --grad-avatar-4: linear-gradient(135deg, #FF6B35, #FFB088);
+
+  --grad-hero-card: linear-gradient(135deg, #FF6B35 0%, #FF8B5A 100%);
+
+  --container-max: 1200px;
+  --container-padding: 24px;
+  --section-py: 100px;
+  --section-py-mobile: 60px;
+
+  --radius-card: 24px;
+  --radius-card-md: 20px;
+  --radius-input: 16px;
+  --radius-input-sm: 12px;
+  --radius-pill: 100px;
+  --radius-icon: 16px;
+  --radius-circle: 50%;
+
+  --shadow-nav-cta:        0 4px 12px rgba(255, 107, 53, 0.25);
+  --shadow-btn-primary:    0 8px 24px rgba(255, 107, 53, 0.35);
+  --shadow-btn-hover:      0 12px 32px rgba(255, 107, 53, 0.45);
+  --shadow-hero-card:      0 20px 50px rgba(0, 0, 0, 0.10);
+  --shadow-comparison:     0 20px 50px rgba(0, 0, 0, 0.06);
+  --shadow-solution-hover: 0 20px 40px rgba(255, 107, 53, 0.15);
+  --shadow-testi-hover:    0 20px 40px rgba(0, 0, 0, 0.08);
+  --shadow-form:           0 30px 60px rgba(0, 0, 0, 0.20);
+  --shadow-wa:             0 10px 30px rgba(37, 211, 102, 0.40);
+}

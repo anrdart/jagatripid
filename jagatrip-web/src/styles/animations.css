@@ -1,0 +1,15 @@
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.5; }
+}
+
+.hero-badge .dot { animation: pulse 2s infinite; }
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-badge .dot { animation: none; }
+  .hero-card, .problem-card, .solution-card, .dest-card,
+  .testimonial, .process-step, .float-wa, .nav-cta,
+  .btn-primary, .btn-secondary { transition: none !important; }
+  .solution-card::before { transition: none !important; }
+  html { scroll-behavior: auto; }
+}
