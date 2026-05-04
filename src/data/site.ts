@@ -1,7 +1,7 @@
 const url    = import.meta.env.PUBLIC_SITE_URL  ?? 'https://jagatrip.com';
-const phone  = import.meta.env.PUBLIC_PHONE     ?? '+62 812-3456-7890';
+const phone  = import.meta.env.PUBLIC_PHONE     ?? '+62 856-4397-2139';
 const email  = import.meta.env.PUBLIC_EMAIL     ?? 'info@jagatrip.com';
-const waNum  = import.meta.env.PUBLIC_WA_NUMBER ?? '6281234567890';
+const waNum  = import.meta.env.PUBLIC_WA_NUMBER ?? '6285643972139';
 
 export const site = {
   name: 'JAGATRIP',

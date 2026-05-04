@@ -1,5 +1,5 @@
 export function initFormHandler(): void {
-  const waNumber = import.meta.env.PUBLIC_WA_NUMBER ?? '6281234567890';
+  const waNumber = import.meta.env.PUBLIC_WA_NUMBER ?? '6285643972139';
   const form = document.getElementById('konsultasi-form') as HTMLFormElement | null;
   if (!form) return;
 
